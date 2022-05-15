@@ -50,18 +50,18 @@ Parsers (HTML, CSS, etc), Script Processors ,Tree construction and Order of scri
 
 ![image](https://user-images.githubusercontent.com/91394678/168481898-4424af88-d146-490a-aa79-4b5f805ed28d.png)
 
-Let's suppose that In our Webpage at this moment the content is comprises of html and css, so in that case what will happen.
+Let's suppose that In our Webpage at this moment the content is comprised of Html and CSS, so in that case what will happen.
 HTML parser will start first from the line <html> as it is incremental, but if there are any <link>, <script> and <style> tag is there then the HTML parsing will stop and it will then parse the CSS or JS first, after css is download then HTML parsing 
 will again fetch by the engine, until any other <link>, <script> and <style> tag in between the files.
-After successfull parsing we will have a complete render tree with HTML DOM and CSSOM, then the layout will hapen and then painting on screen starts.
+After successful parsing we will have a complete render tree with HTML DOM and CSSOM, then the layout will happen, and then painting on screen starts.
 
-![image](https://user-images.githubusercontent.com/91394678/168482317-b62d86b6-de1e-483d-8ff5-197eeb147529.png)
+
 
 
 
 Layout and Painting
 When the renderer is created and added to the tree, it does not have a position and size. Calculating these values is called layout.
-Layout is a recursive process — it begins at the root renderer, which corresponds to the <html> element of the HTML document. Layout continues recursively through a part or the entire renderer hierarchy, computing geometric info for each renderer that requires it.
+The layout is a recursive process — it begins at the root renderer, which corresponds to the <html> element of the HTML document. The layout continues recursively through a part of the entire renderer hierarchy, computing geometric info for each renderer that requires it.
 The position of the root renderer is 0,0 and its dimensions have the size of the visible part of the browser window (a.k.a. the viewport).
 In the paint stage, the renderer tree is traversed and the renderer’s paint() method is called to display the content on the screen.
 

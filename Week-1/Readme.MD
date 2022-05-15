@@ -56,7 +56,7 @@ will again fetch by the engine, until any other <link>, <script> and <style> tag
 After successful parsing we will have a complete render tree with HTML DOM and CSSOM, then the layout will happen, and then painting on screen starts.
 
 
-
+![image](https://user-images.githubusercontent.com/91394678/168482317-b62d86b6-de1e-483d-8ff5-197eeb147529.png)
 
 
 Layout and Painting

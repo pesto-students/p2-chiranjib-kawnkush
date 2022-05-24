@@ -1,11 +1,12 @@
 <html>
 <head>
-<link rel="stylesheet" href="/Week-1/Frontend  Assignment/style.min.css">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 <style>
 .nav{
-margin:  -12px;
-padding : 0;
-width: 75px;
+margin:  0px;
+padding : 0px;
+margin-left: -10px;
+width: 49px;
 position: fixed;
 height: auto;
 
@@ -17,6 +18,7 @@ padding: 8px 16px;
 text-align: center;
 text-decoration: none;
 padding-bottom: 50px;;
+color: rgb(55, 55, 56);
 
 }
 .musicplayer{
@@ -36,10 +38,9 @@ height: 250pxpx;
 	
 }
 .list-of-songs {
-  margin-top: -21px;
-  margin-left: 76px;
-  height: 350px;
-
+	margin-top: -1px;
+	margin-left: 64px;
+	height: 305px;
 }
 
 .list-of-songs ol {
@@ -50,7 +51,7 @@ height: 250pxpx;
 }
 ol li {
 	margin-left: 20px;
-	padding-right: 179px;
+	padding-right: 132px;
 	padding-top: 11px;
 }
 li ul {
@@ -60,9 +61,7 @@ li ul {
 	border-style: outset;
 	border-radius: 1px;
 }
-ul{
-    width: 1209px;
-}
+
 ul li {
 	margin-top: -17px;
 	margin-bottom: -4px;
@@ -72,22 +71,23 @@ ul li {
 }
 .player {
 	/* display: inline; */
-	position: absolute;
+	display: block;
+	padding: 0px;
 	margin-left: -8px;
-	height: 100px;
-	width: 1403px;
-	background-color: rgb(62, 62, 99);
+	background-color: #43689B;
 }
 .player img {
 	margin-left: 92px;
+	margin-top: 20px;;
 	height: 80px;
 	width: 80px;
 }
-.player .songinfo{
-	margin-top: -100px;
-	margin-left: 400px;
-	width: 1000px;
-	height: auto;
+.player .songinfo {
+	margin-top: -56px;
+	margin-left: 192px;
+	font-size: 9px;
+	/* width: 1023px; */
+	/* height: auto; */
 }
 .songinfo h2{
 text-align: left;
@@ -99,6 +99,11 @@ color: rgb(207, 202, 128);
 	/* display: inline; */
 	margin-left: 62px;
 	margin-right: 52px;
+}
+.buttons {
+	margin-left: 938px;
+	margin-top: 37px;
+	/* display: inline; */
 }
 </style>
 </head>
@@ -124,10 +129,10 @@ color: rgb(207, 202, 128);
 	</div>
 	<div class="list-of-songs">
 		<ol type="1">
-			<li><ul><li>One Dance</li><li>Crake feat CatKid & Cyla</li><li>2:54</li></ul></li>
-			<li><ul><li>Panda</li><li>Cattee</li><li>4:06</li></ul></li>
-			<li><ul><li>Can't Stop the Feeling!</li><li>Catin Cimberlake</li><li>3:56</li></ul></li>
-			<li><ul><li>Work From Home</li><li>Cat Harmony feat Colla</li><li>3:34</li></ul></li>
+			<li><ul><li>One Dance</li><li>Crake feat CatKid & Cyla</li><li>2:54</li><li style="color :rgb(73, 73, 216) ;">CATTY CLOUD SYNC</li></ul></li>
+			<li><ul><li>Panda</li><li>Cattee</li><li>4:06</li><li style="color :rgb(73, 73, 216) ;">CATTY CLOUD SYNC</li></ul></li>
+			<li><ul><li>Can't Stop the Feeling!</li><li>Catin Cimberlake</li><li>3:56</li><li style="color :rgb(73, 73, 216) ;">CATTY CLOUD SYNC</li></ul></li>
+			<li><ul><li>Work From Home</li><li>Cat Harmony feat Colla</li><li>3:34</li><li style="color :rgb(73, 73, 216) ;">CATTY CLOUD SYNC</li></ul></li>
 		</ol>
 	</div>
 	<div class="player">
@@ -137,11 +142,13 @@ color: rgb(207, 202, 128);
 		<div class="songinfo">
 			<h2>If It Ain't Love</h2>
 			<h2>Catson Derulo</h2>
+			<div class="buttons">
 				<button class="las la-step-backward"></button>
 				<button class="las la-pause"></button>
 				<button class="las la-step-forward"></button>
 				<button class="las la-redo-alt"></button>
 				<button class="las la-random"></button>
+			</div>
 			</div>
 	</div>
 </div>	

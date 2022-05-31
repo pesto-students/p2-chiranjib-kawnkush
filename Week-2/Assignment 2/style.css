@@ -1,0 +1,45 @@
+body{
+
+    background-color: azure;
+}
+
+header{
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(16, 91, 121);
+
+
+}
+li{
+
+    border-right: 1px solid rgb(46, 42, 42);
+
+float: left;
+
+
+}
+li:last-child {
+    border-right: none;
+  }
+li a{
+    display: block;
+  color: white;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+li a:hover {
+    background-color: rgb(150, 44, 44);
+}
+.active {
+    background-color: #04AA6D;
+}

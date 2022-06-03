@@ -1,0 +1,45 @@
+//Bind , call and apply;
+#ES5
+
+All 3 functions enable us to get the Function.prototype property from which we can easily attach this or object functions to our function.
+Without these functions, “this” will be assigned to the global context.
+
+
+Bind()
+
+It helps us to create a new function that can bind the "this" parameter to the object.
+
+var car = { 
+    regNum: "GA12345",
+    brand: "Toyota",
+
+    displayDetails: function(ownerName){
+        console.log(ownerName + ", this is your car: " + this.regNum + " " + this.brand);
+    }
+}
+
+var myCarDetails = car.displayDetails.bind(car, "Shubh");
+
+call()
+
+This time there is a car object without the displayDetails function, which is located in the global context.
+
+var car = { 
+    regNum: "GA12345",
+    brand: "Toyota"
+}
+
+function displayDetails(ownerName) {
+    console.log(ownerName + ", this is your car: " + this.regNum + " " + this.brand);
+}
+We can use the apply() function:
+
+displayDetails.apply(car, ["Vivian"]); // Vivian, this is your car: GA12345 Toyota //or displayDetails.call(car, "Vivian");
+//bind() is not able to bind the function to obj car, it will throw a error. 
+
+
+
+
+
+
+

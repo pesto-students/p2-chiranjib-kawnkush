@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Code Execution</h2>
+
+<p></p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+
+<script>
+
+var adder = function(...args){
+
+    return args.reduce((init,current)=>{
+        return init + current;
+    });
+
+
+};
+
+var cache = {};
+
+
+var output = function(...args){
+
+
+            var n = args.toString();
+            if(n in cache)
+            {
+                    console.log("This is in Cache "+cache[n]);
+                    return adder(...args);
+            }
+            else{
+
+                cache[n] = adder(...args);
+                console.log("This is a Calculation ");
+                return adder(...args);
+               
+
+            }
+
+}
+
+
+document.getElementById("demo").innerHTML = output(3,4,5,6,7);
+document.getElementById("demo2").innerHTML = output(3,4,5,6,7);
+document.getElementById("demo3").innerHTML = output(3,4,5,6,9);
+document.getElementById("demo4").innerHTML = output(3,4,5,6,9,22);
+document.getElementById("demo5").innerHTML = output(3,4,5,6,7);
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

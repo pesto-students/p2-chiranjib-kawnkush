@@ -1,0 +1,33 @@
+
+//#3.3 
+
+function createIncrement() {
+    let count = 0;
+    function increment() { 
+      count++;
+    }
+    let message = `Count is ${count}`;
+    function log() {
+      console.log(message);
+    }
+    
+    return [increment, log];
+  }
+  const [increment, log] = createIncrement();
+  increment();  // count is 1
+  increment(); // count is 1
+  increment(); // count is 1
+  log(); // Count is 0
+
+
+
+
+
+  //When we are calling increment() then count is increasing to 1, again when we are calling it incremented to 2 and soon. 
+  //but scope of count is inside increment function only, that is why it is not coming on log function and stays count = 0;
+  //log() function is a closure that captures message variable from the createIncrement() scope so the count will stay at 0;
+
+  // if we put console.log(count) inside increment function then only we can see the count 1,2,3 ......
+
+
+

@@ -1,0 +1,17 @@
+body{
+
+text-align: center;
+background-color: #639191;
+font-family: Arial, sans-serif;
+
+}
+
+ul,li{
+
+  list-style: none;
+  padding-top: 20px;
+  padding-left: 50px;
+  border-style: dotted;
+
+}
+
